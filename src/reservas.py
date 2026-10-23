@@ -3,14 +3,13 @@
 reservas = []
 
 def registrar_reserva(id_reserva, cliente_id, servicio_id, fecha, hora):
-    reserva = {
-        "id": id_reserva,
-        "cliente_id": cliente_id,
-        "servicio_id": servicio_id,
-        "fecha": fecha,
-        "hora": hora,
-        "estado": "ACTIVA"
-    }
+<<<<<<< HEAD
+    reserva = {"id": id_reserva, "estado": "PENDIENTE_CONFIRMACION"}
+=======
+    if not hora:
+        return "Error: La hora es obligatoria"
+    reserva = {"id": id_reserva, "fecha": fecha, "hora": hora, "estado": "ACTIVA"}
+>>>>>>> feature/reserva-hora
     reservas.append(reserva)
     return reserva
 
