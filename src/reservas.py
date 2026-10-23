@@ -3,14 +3,7 @@
 reservas = []
 
 def registrar_reserva(id_reserva, cliente_id, servicio_id, fecha, hora):
-    reserva = {
-        "id": id_reserva,
-        "cliente_id": cliente_id,
-        "servicio_id": servicio_id,
-        "fecha": fecha,
-        "hora": hora,
-        "estado": "ACTIVA"
-    }
+    reserva = {"id": id_reserva, "estado": "PENDIENTE_CONFIRMACION"}
     reservas.append(reserva)
     return reserva
 
